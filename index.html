@@ -1,0 +1,69 @@
+{% extends 'main/layout.html' %}
+<!--{% load static %}-->
+
+{% block title %}ETMY(Ru){% endblock %}
+
+{% block content %}
+
+<div class="features">
+    <h1>Рации для работы производства ETMY</h1>
+    <p>Интерактивная схема работы портативной рации. Для управлению моделью необходимо управлять радиостанцией как в реальной жизни</p>
+
+</div>
+
+   <div class="image-row">
+     <div class="image-col">
+       <img src="{% static 'main/img/23.png' %}" alt="Image 1">
+       <p>Аналоговая ЕТ-53888, водонепроницаемая, 10 ватт</p>
+   </div>
+
+   <div class="button-container">
+
+        <button class="invisible-btn new-width" style="position: absolute; top: 40.5%; left: 56.69%; transform: translate(-100%, -100%); padding: 15px; border: 1px dashed red;" onclick="replaceImage()">
+        Button 1
+   </button>
+</div>
+</div>
+
+
+<div class="button-container2">
+    <button class="invisible-btn new-width" style="position: absolute; top: 40.5%; left: 56.69%; transform: translate(-100%, -100%); padding: 9px; border: 1px dashed red;" onclick="replaceImage2()">
+        Button 2
+    </button>
+</div>
+
+<audio id="audio" src="{% static 'main/audio/Wkl.mp3' %}" ></audio>
+
+<script>
+  document.querySelector('.invisible-btn').addEventListener('click', function() {
+
+
+    // setTimeout(replaceImage, 3000);// Запланировать замену изображения через 2 секунды
+
+  });
+
+  let descriptorPosition = 1;
+  function replaceImage() {
+    const currentImage = document.querySelector('.image-col img');
+
+    if(descriptorPosition === 1) {
+
+        currentImage.src = "{% static 'main/img/23.png' %}"; // Заменить на первую позицию дескриптора
+        descriptorPosition = 2; // Переключить на вторую позицию дескриптора
+    } else if (descriptorPosition === 2) {
+        audio = document.getElementById("audio");
+        audio.play();
+        currentImage.src = "{% static 'main/img/234.png' %}"; // Заменить на вторую позицию дескриптора
+        descriptorPosition = 1; // Переключить на первую позицию дескриптора
+    }
+}
+
+  function replaceImage2() {
+        if(descriptorPosition === 1) {
+            const currentImage = document.querySelector('.image-col img');
+            currentImage.src = "{% static 'main/img/234.png' %}"; // Заменить на картинку "234.png"
+            descriptorPosition = 2; // Переключить на вторую позицию дескриптора
+        }
+    }
+</script>
+{% endblock %}
