@@ -1,0 +1,201 @@
+body {
+    background:  #181818;
+}
+
+aside {
+    float: left;
+    background: #181818;
+    width: 18%;
+    padding: 2,5%;
+    height: 150vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+
+
+
+
+}
+aside img {
+    width: 20px;
+    float: left;
+
+}
+
+aside .logo {
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+}
+
+aside h3 {
+   color: #fff;
+   margin-top: 50px;
+   font-size: 28px;
+}
+
+aside ul {list-style: none}
+aside ul li {
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    transition: all .6s ease;
+}
+
+
+
+'aside ul li:hover, aside ul a:hover' {
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+
+}
+aside ul li:hover, aside ul a:hover {
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+
+.features {
+    margin-top: 10px;
+    text-align: center;
+    width: 75%;
+}
+main {
+    background-color:  #181818;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Чтобы блок занимал всю высоту контейнера */
+}
+
+main .features h1 {font-size: 30px;}
+
+main .features p {max-width: 500px; margin: 28px auto;}
+main {
+    background-color:  #181818;/*вый цвет для блока mail */
+    padding: 20px;
+}
+
+
+/*background-color: устанавливает цвет фона элемента main.*/
+/*padding: устанавливает значение отступа для элемента main.*/
+/*color: устанавливает цвет текста внутри элемента main.*/
+/*display: flex устанавливает режим отображения элемента main как гибкий контейнер.*/
+/*flex-direction: column указывает направление гибкого потока внутри элемента main.*/
+/*justify-content: center выравнивает элементы внутри main по центру.*/
+/*align-items: center выравнивает элементы внутри main по вертикали.*/
+/*height: 100% устанавливает высоту элемента main равной 100% высоты родительского контейнера.*/
+/*div {*/
+/*    background-color: #0dcaf0;*/
+/*  padding: 50px;*/
+/*}*/
+
+/*button {*/
+/*  margin-top: -10px; !* Измените значение (-10px) на то, которое подходит вам лучше *!*/
+/*}*/
+
+/*.button-container {*/
+/*    margin-bottom: 10px; !* Отступ между кнопкой и картинкой *!*/
+/*}*/
+
+/*.image-container {*/
+/*    display: inline-block;*/
+/*    margin-left: 80px;*/
+/*     margin-top: 60px;*/
+/*}*/
+main img {
+    width: 300px;
+    float: left;
+}
+
+/*.image-row {*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  align-items: flex-start;*/
+/*  margin-bottom: 20px; !* Установите нужный вам отступ *!*/
+/*}*/
+
+/*display: flex — устанавливает режим отображения элемента .image-row как гибкий контейнер;*/
+/*justify-content: space-between — выравнивает элементы внутри .image-row на расстоянии друг от друга;*/
+/*align-items: flex-start — выравнивает элементы внутри .image-row по горизонтали;*/
+/*margin-bottom: 20px — устанавливает отступ в 20 пикселей от элемента .image-row.*/
+
+/*.image-col {*/
+/*width: 33%;*/
+/*margin-bottom: 15px;*/
+/*text-align: center;*/
+/*}*/
+/*.image-col {*/
+/*  flex: 0 0 30%; !* Рассчитайте flex-базис для каждой картинки, чтобы они занимали по 30% ширины (при 3 картинках в строке) *!*/
+}
+/*width: 33% — устанавливает ширину элемента image-col равной 33% от общей ширины родительского контейнера.*/
+/*margin-bottom: 15px — устанавливает отступ в 15 пикселей от нижней границы элемента image-col.*/
+/*text-align: center — выравнивает текст внутри элемента image-col по центру.*/
+/*Вторая часть кода (.image-col) содержит дополнительные настройки для расчёта flex-базы каждой картинки. Flex-база определяет размер */
+/*элемента в гибком контейнере и рассчитывается автоматически, если не указано иное значение. В этом случае мы хотим, чтобы каждая картинка занимала 30% */
+/*ширины родительского контейнера, если в строке будет 3 картинки.*/
+#radio-image {
+  position: relative;
+}
+#radio-image::before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+}
+
+#radio-image::after {
+  content: '';
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  width: 20px;
+  height: 20px;
+  background-color: green;
+}
+
+.invisible-btn {
+    background: none;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+}
+/*.invisible-btn {*/
+/* width: 11px;*/
+/*}*/
+
+.new-width {
+   width: 18px;
+}
+
+.image-row {
+  position: relative;
+}
+
+.image-col {
+  width: 100%; /* Занимает всю ширину родительского элемента */
+  position: relative; /* Относительное позиционирование, чтобы кнопка была внутри этого блока */
+}
+
+.button-container {
+  position: absolute; /* Абсолютное позиционирование относительно родительского элемента */
+  top: 39%; /* Размещение кнопки на вертикальном центре */
+  left: 39%; /* Размещение кнопки на горизонтальном центре */
+  transform: translate(-50%, -50%); /* Центрирование кнопки */
+}
+
+
+.button-container2 {
+  position: absolute; /* Абсолютное позиционирование относительно родительского элемента */
+  top: 52.5%; /* Размещение кнопки на вертикальном центре */
+  left: 58.5%; /* Размещение кнопки на горизонтальном центре */
+  transform: translate(-50%, -50%); /* Центрирование кнопки */
+}
