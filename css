@@ -11,16 +11,12 @@ aside {
     color: #fff;
     border-right: 5px solid #4d4d4d;
 
-
-
-
 }
 aside img {
     width: 20px;
     float: left;
 
 }
-
 aside .logo {
     font-size: 40px;
     margin-left: 10px;
@@ -42,20 +38,16 @@ aside ul li {
     transition: all .6s ease;
 }
 
-
-
 'aside ul li:hover, aside ul a:hover' {
     color: #eb5959;
     text-decoration: none;
     transform: scale(1.05);
-
 }
 aside ul li:hover, aside ul a:hover {
     color: #eb5959;
     text-decoration: none;
     transform: scale(1.05);
 }
-
 
 .features {
     margin-top: 10px;
@@ -81,7 +73,43 @@ main {
     padding: 20px;
 }
 
+.button-container {
+  position: relative; /* Абсолютное позиционирование относительно родительского элемента */
+  top:  77%; /* Размещение кнопки на вертикальном центре */
+  left: 100%; /* Размещение кнопки на горизонтальном центре */
+  transform: translate(-32%, -75%); /* Центрирование кнопки */
+   /*width: 80 px; /* Пример задания ширины кнопки */
 
+}
+
+.button-container2 {
+  position: relative; /* Абсолютное  позиционирование относительно родительского элемента */
+  top: 80%; /* Размещение кнопки на вертикальном центре */
+  left: -1%; /* Размещение кнопки на горизонтальном центре */
+  transform: translate(35%, -835%); /* Центрирование кнопки */
+   /*width: 6 px; /* Пример задания ширины кнопки */
+
+}
+
+.button-container,
+.button-container2 {
+  opacity: 0;
+
+  /* Остальные стили оставляем без изменений */
+  /*visibility: hidden; /* Делаем кнопки невидимыми */
+  /* или можно использовать 'opacity: 0;' для того же эффекта */
+}
+
+
+.button-container button {
+    width: 40px;   /* Кнопка займет всю ширину контейнера */
+    height: 30px;  /* Кнопка займет всю высоту контейнера */
+
+}
+.button-container2 button{
+    width: 40px;   /* Кнопка займет всю ширину контейнера */
+    height: 50px;  /* Кнопка займет всю высоту контейнера */
+}
 /*background-color: устанавливает цвет фона элемента main.*/
 /*padding: устанавливает значение отступа для элемента main.*/
 /*color: устанавливает цвет текста внутри элемента main.*/
@@ -103,99 +131,28 @@ main {
 /*    margin-bottom: 10px; !* Отступ между кнопкой и картинкой *!*/
 /*}*/
 
-/*.image-container {*/
-/*    display: inline-block;*/
-/*    margin-left: 80px;*/
-/*     margin-top: 60px;*/
-/*}*/
+
 main img {
-    width: 300px;
+    max-width: 200px;
     float: left;
 }
 
-/*.image-row {*/
-/*  display: flex;*/
-/*  justify-content: space-between;*/
-/*  align-items: flex-start;*/
-/*  margin-bottom: 20px; !* Установите нужный вам отступ *!*/
-/*}*/
 
-/*display: flex — устанавливает режим отображения элемента .image-row как гибкий контейнер;*/
-/*justify-content: space-between — выравнивает элементы внутри .image-row на расстоянии друг от друга;*/
-/*align-items: flex-start — выравнивает элементы внутри .image-row по горизонтали;*/
-/*margin-bottom: 20px — устанавливает отступ в 20 пикселей от элемента .image-row.*/
 
-/*.image-col {*/
-/*width: 33%;*/
-/*margin-bottom: 15px;*/
-/*text-align: center;*/
-/*}*/
-/*.image-col {*/
-/*  flex: 0 0 30%; !* Рассчитайте flex-базис для каждой картинки, чтобы они занимали по 30% ширины (при 3 картинках в строке) *!*/
-}
-/*width: 33% — устанавливает ширину элемента image-col равной 33% от общей ширины родительского контейнера.*/
-/*margin-bottom: 15px — устанавливает отступ в 15 пикселей от нижней границы элемента image-col.*/
-/*text-align: center — выравнивает текст внутри элемента image-col по центру.*/
-/*Вторая часть кода (.image-col) содержит дополнительные настройки для расчёта flex-базы каждой картинки. Flex-база определяет размер */
-/*элемента в гибком контейнере и рассчитывается автоматически, если не указано иное значение. В этом случае мы хотим, чтобы каждая картинка занимала 30% */
-/*ширины родительского контейнера, если в строке будет 3 картинки.*/
-#radio-image {
-  position: relative;
-}
-#radio-image::before {
-  content: '';
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  width: 20px;
-  height: 20px;
-  background-color: red;
+.indicator-col {
+    display: flex;
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    align-items: center;     /* Центрирование содержимого по вертикали */
+    height: 200%;            /* Занимает всю высоту родительского контейнера */
+    margin-left: -27px; /* Положительное значение для сдвига вправо */
+    margin-top: -210px; /* Отрицательное значение для сдвига вверх */
 }
 
-#radio-image::after {
-  content: '';
-  position: absolute;
-  top: 100px;
-  left: 50px;
-  width: 20px;
-  height: 20px;
-  background-color: green;
-}
-
-.invisible-btn {
-    background: none;
-    border: none;
-    color: transparent;
-    cursor: pointer;
-}
-/*.invisible-btn {*/
-/* width: 11px;*/
-/*}*/
-
-.new-width {
-   width: 18px;
-}
-
-.image-row {
-  position: relative;
-}
-
-.image-col {
-  width: 100%; /* Занимает всю ширину родительского элемента */
-  position: relative; /* Относительное позиционирование, чтобы кнопка была внутри этого блока */
-}
-
-.button-container {
-  position: absolute; /* Абсолютное позиционирование относительно родительского элемента */
-  top: 39%; /* Размещение кнопки на вертикальном центре */
-  left: 39%; /* Размещение кнопки на горизонтальном центре */
-  transform: translate(-50%, -50%); /* Центрирование кнопки */
+/* Сдвиг по горизонтали и вертикали */
+.indicator-col img {
+    display: block;
+    margin-left: 35px; /* Положительное значение для сдвига вправо */
+    margin-top: 0px; /* Отрицательное значение для сдвига вверх */
 }
 
 
-.button-container2 {
-  position: absolute; /* Абсолютное позиционирование относительно родительского элемента */
-  top: 52.5%; /* Размещение кнопки на вертикальном центре */
-  left: 58.5%; /* Размещение кнопки на горизонтальном центре */
-  transform: translate(-50%, -50%); /* Центрирование кнопки */
-}
