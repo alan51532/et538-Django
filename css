@@ -2,6 +2,9 @@ body {
     background:  #181818;
 }
 
+
+
+
 aside {
     float: left;
     background: #181818;
@@ -38,7 +41,7 @@ aside ul li {
     transition: all .6s ease;
 }
 
-'aside ul li:hover, aside ul a:hover' {
+aside ul li:hover, aside ul a:hover {
     color: #eb5959;
     text-decoration: none;
     transform: scale(1.05);
@@ -67,7 +70,7 @@ main {
 
 main .features h1 {font-size: 30px;}
 
-main .features p {max-width: 500px; margin: 28px auto;}
+main .features p {max-width: 300px; margin: 28px auto;}
 main {
     background-color:  #181818;/*вый цвет для блока mail */
     padding: 20px;
@@ -91,9 +94,10 @@ main {
 
 }
 
+
 .button-container,
 .button-container2 {
-  opacity: 0;
+  opacity: 2;
 
   /* Остальные стили оставляем без изменений */
   /*visibility: hidden; /* Делаем кнопки невидимыми */
@@ -110,26 +114,10 @@ main {
     width: 40px;   /* Кнопка займет всю ширину контейнера */
     height: 50px;  /* Кнопка займет всю высоту контейнера */
 }
-/*background-color: устанавливает цвет фона элемента main.*/
-/*padding: устанавливает значение отступа для элемента main.*/
-/*color: устанавливает цвет текста внутри элемента main.*/
-/*display: flex устанавливает режим отображения элемента main как гибкий контейнер.*/
-/*flex-direction: column указывает направление гибкого потока внутри элемента main.*/
-/*justify-content: center выравнивает элементы внутри main по центру.*/
-/*align-items: center выравнивает элементы внутри main по вертикали.*/
-/*height: 100% устанавливает высоту элемента main равной 100% высоты родительского контейнера.*/
-/*div {*/
-/*    background-color: #0dcaf0;*/
-/*  padding: 50px;*/
-/*}*/
 
-/*button {*/
-/*  margin-top: -10px; !* Измените значение (-10px) на то, которое подходит вам лучше *!*/
-/*}*/
 
-/*.button-container {*/
-/*    margin-bottom: 10px; !* Отступ между кнопкой и картинкой *!*/
-/*}*/
+
+
 
 
 main img {
@@ -155,4 +143,32 @@ main img {
     margin-top: 0px; /* Отрицательное значение для сдвига вверх */
 }
 
+.img-container {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center;     /* Центрирование по вертикали (если нужно) */
+}
+
+
+.button-container3 {
+  position: relative; /* Абсолютное  позиционирование относительно родительского элемента */
+  top: 80%; /* Размещение кнопки на вертикальном центре */
+  left: -1%; /* Размещение кнопки на горизонтальном центре */
+  transform: translate(0%, -435%); /* Центрирование кнопки */
+   /*width: 6 px; /* Пример задания ширины кнопки */
+
+}
+
+.button-container3 {
+    opacity: 2; /* Обратите внимание, что значение opacity должно быть от 0 до 1 */
+}
+
+.button-container3 button {
+    width: 100px;   /* Кнопка займет всю ширину контейнера */
+    height: 50px;   /* Кнопка займет всю высоту контейнера */
+    background-color: #0000FF; /* Салатовый цвет (LightGreen) */
+    border: none; /* Убираем рамку */
+    color: white; /* Цвет текста */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Курсор в виде указателя */
 
